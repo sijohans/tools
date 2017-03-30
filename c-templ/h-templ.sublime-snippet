@@ -1,0 +1,38 @@
+<snippet>
+    <content>
+<![CDATA[
+#ifndef _${TM_FILENAME/(.+)\..+|.*/\U$1/g/:name}_H_
+#define _${TM_FILENAME/(.+)\..+|.*/\U$1/g/:name}_H_
+/**
+ * @file ${TM_FILENAME}
+ *
+ * Description
+ *
+ */
+
+/*======= Includes ==========================================================*/
+
+#include <stdint.h>
+
+/*======= Public macro definitions ==========================================*/
+/*======= Type Definitions and declarations =================================*/
+/*======= Public variable declarations ======================================*/
+/*======= Public function declarations ======================================*/
+
+/**
+ * @brief [brief description]
+ * @details [long description]
+ * 
+ * @param in [description]
+ * @return [description]
+ */
+uint8_t a_function(uint8_t in);
+
+#endif /* _${TM_FILENAME/(.+)\..+|.*/\U$1/g/:name}_H_ */
+
+]]>
+    </content>
+    <tabTrigger>htempl</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.h</scope> -->
+</snippet>
