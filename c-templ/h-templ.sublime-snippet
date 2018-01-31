@@ -3,6 +3,11 @@
 <![CDATA[
 #ifndef _${TM_FILENAME/(.+)\..+|.*/\U$1/g/:name}_H_
 #define _${TM_FILENAME/(.+)\..+|.*/\U$1/g/:name}_H_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /**
  * @file ${TM_FILENAME}
  *
@@ -27,6 +32,10 @@
  * @return [description]
  */
 uint8_t a_function(uint8_t in);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* _${TM_FILENAME/(.+)\..+|.*/\U$1/g/:name}_H_ */
 
