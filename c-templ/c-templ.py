@@ -17,7 +17,7 @@ extern \"C\" {
 #endif
 
 /**
- * @file $name.h
+ * @file $name
  *
  * Description
  *
@@ -39,7 +39,7 @@ extern \"C\" {
 #endif /* $guard */
 """)
 	headerContent = headerContent.substitute(
-		guard='_%s_H_' % includeGuard,
+		guard=('_%s_H_' % includeGuard).upper(),
 		name='%s.h' % fileName)
 	headerFile = open('%s.h' % fileName, 'w+')
 	headerFile.write(headerContent)
