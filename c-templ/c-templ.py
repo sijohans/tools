@@ -8,7 +8,7 @@ def fileExists(filename):
 	return os.path.isfile(filename + '.h') or os.path.isfile(filename + '.c')
 
 def generateHFile(filename):
-	includeGuard = filename.replace('-', "_")
+	includeGuard = filename.replace('-', "_").upper()
 	headerContent = Template("""#ifndef $guard
 #define $guard
 
