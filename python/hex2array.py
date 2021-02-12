@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 import sys
 import re
@@ -40,7 +40,7 @@ $ python hex2array.py -n 3 12345678 aaff456678 0x12345678123456781223
 
 		# String length must be a multiple of 2
 		if len(hexString) & 1 == 1 and len(hexString) >= 2:
-			print 'Bad length (%d) of string "%s", expected length as multiple of 2.' % (len(hexString), hexString)
+			print(f"Bad length ({len(hexString)}) of string \"{hexString}\", expected length as multiple of 2.")
 			continue
 
 		if hexString[0:2] == '0x' or hexString[0:2] == '0X':
@@ -48,7 +48,7 @@ $ python hex2array.py -n 3 12345678 aaff456678 0x12345678123456781223
 
 		# Hex representation may only include [a-fA-F0-9]
 		if search(hexString):
-			print 'Bad characters in string "%s", expected [a-fA-F0-9]' % hexString
+			print(f"Bad characters in string \"{hexString}\", expected [a-fA-F0-9]")
 			continue
 
 		n = 1
